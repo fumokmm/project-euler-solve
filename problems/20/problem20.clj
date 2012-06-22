@@ -4,7 +4,8 @@
       sum
       (recur (* sum n) (dec n)))))
 
-(def ans (apply + (map (fn [s] (bigdec (str s)))
-		       (seq (str (fact 100M))))))
+(def ans (apply +
+		(map #(bigdec (str %))
+		     (seq (str (fact 100M))))))
 (println ans)
 ; => 648M
