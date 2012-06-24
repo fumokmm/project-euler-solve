@@ -13,7 +13,7 @@
  */
 
 def fibo(Closure filters = {it}) {
-  def (a, b) = [0G, 1G]
+  def (a, b) = [1G, 1G]
   [ hasNext: {true},
     next: {
       def rslt = null
